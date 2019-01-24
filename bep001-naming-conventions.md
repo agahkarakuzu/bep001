@@ -60,14 +60,14 @@ See (0008,0008) Image Type. Vendor variant?
 
 | Name      | Description                                  | Units |
 |-----------|----------------------------------------------|-------|
-| T1map     | Longitudinal relaxation time map             | ms    |
-| T2map     | True transverse relaxation time map          | ms    |
-| T2starmap | Observed transverse relaxation time map      | ms    |
-| R1map     | Longitudinal relaxation rate map             | 1/ms  |
-| R2map     | Transverse relaxation rate map               | 1/ms  |
-| R2starmap | Observed transverse relaxation rate map      | 1/ms  |
+| T1map     | Longitudinal relaxation time map             | s     |
+| T2map     | True transverse relaxation time map          | s     |
+| T2starmap | Observed transverse relaxation time map      | s     |
+| R1map     | Longitudinal relaxation rate map             | 1/s   |
+| R2map     | Transverse relaxation rate map               | 1/s   |
+| R2starmap | Observed transverse relaxation rate map      | 1/s   |
 | MTRmap    | Magnetization transfer ratio map             | %     |
 | MTsat     | Magnetization transfer saturation map        | %     |
 | PDmap     | Proton density map                           | N/A   |
-| T1Rmap    | T1-rho (T1 relaxation in rotating frame) map | ms    |
+| T1Rmap    | T1-rho (T1 relaxation in rotating frame) map | s     |
 | UNIT1     | Homogeneous (flat) T1w image                 | N/A   |
