@@ -2,7 +2,7 @@ Please see the relevant issue [here](https://github.com/bids-standard/bep001/iss
 
 ## Classification of the suggested metadata fields 
 
-The RECOMMENDED metadata fields in the main spec are divided into 8 classes. Suggested metadata fields ([#9](https://github.com/bids-standard/bep001/issues/9)) are placed under corresponding categories as follows:  
+The RECOMMENDED metadata fields in the main spec are divided into 8 classes. Suggested metadata fields ([#9](https://github.com/bids-standard/bep001/issues/9)) are planned to be inserted under corresponding categories as follows:  
 
 * Scanner hardware 
 * Sequence specifics 
