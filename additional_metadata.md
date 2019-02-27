@@ -6,10 +6,6 @@ The RECOMMENDED metadata fields in the main spec are divided into 8 classes. Sug
 
 * Scanner hardware 
 * Sequence specifics 
-* In-plane spatial encoding
-* Timing parameters 
-     * Mixing Time 
-* RF & Contrast 
     * SpoilingRFPhaseIncrement 
     * SpoilingGradientMoment
     * SpoilingGradientDuration 
@@ -17,6 +13,10 @@ The RECOMMENDED metadata fields in the main spec are divided into 8 classes. Sug
     * MTPulseShape
     * MTPulseBandwidth
     * MTOffsetFrequency
+* In-plane spatial encoding
+* Timing parameters 
+     * Mixing Time 
+* RF & Contrast 
 * Slice acceleration 
 * Anatomical landmarks 
 * Institution information 
