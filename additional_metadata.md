@@ -38,50 +38,23 @@ The terms defined by `Sequence variant` DICOM attribute [(0018,0021)](http://dic
 
 For example, `Sequence Variant` DICOM tag equals to `MTC\SP` for a product FLASH sequence for which magnetizatoin transfer option is enabled. This case typically corresponds to the `MTon` label of the `-acq` key-value pair for `MTR`, `MTS` or `MPM`. When the magnetization transfer is not applied - `MToff` or `T1w` - the `Sequence Variant` DICOM tag equals to `SP`. 
 
-   
+#### Magnetization transfer
 
-### MTState 
+| Field Name        | Definition                                                                                                                                                                                                                                                                                              |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MTState           | RECOMMENDED. Boolean value (`true` or `false`), specifying whether the magnetization transfer pulse is applied. This parameter is REQUIRED by all the anatomical images grouped by `MTR`, `MTS` and `MPM` suffixes. This field originally corresponds to DICOM tag 0018, 9020 `Magnetization Transfer`. |
+| MTOffsetFrequency | RECOMMENDED. The frequency offset of the magnetization transfer pulse with respect to the central H1 Larmor frequency in Hertz (Hz).                                                                                                                                                                    |
+| MTPulseBandwidth  | RECOMMENDED. The excitation bandwidth of the magnetization transfer pulse in Hertz (Hz).                                                                                                                                                                                                                |
+| MTNumberOfPulses  | RECOMMENDED. Number of magnetization transfer RF pulses applied before the readout.                                                                                                                                                                                                                     |
+| MTPulseShape      | RECOMMENDED. Shape of the magnetization transfer RF pulse waveform. Accepted values: `HARD`, `GAUSSIAN`, `GAUSSHANN` (gaussian pulse with Hanning window), `SINC`, `SINCHANN` (sinc pulse with Hanning window), `SINCGAUSS` (sinc pulse with Gaussian window), `FERMI`.                                 |
+| MTPulseDuration   | RECOMMENDED. Duration of the magnetization transfer RF pulse in seconds.                                                                                                                                                                                                                                |   
 
-RECOMMENDED. Boolean value (`true` or `false`), specifying whether the magnetization transfer pulse is applied. This parameter is REQUIRED by all the anatomical images grouped by `MTR`, `MTS` and `MPM` suffixes. This field originally corresponds to DICOM tag 0018, 9020 `Magnetization Transfer`. 
+#### Spoiling
 
-### MTOffsetFrequency 
-
-RECOMMENDED. The frequency offset of the magnetization transfer pulse with respect to the central H1 Larmor frequency in Hertz (Hz).
-
-### MTPulseBandwidth 
-
-RECOMMENDED. The excitation bandwidth of the magnetization transfer pulse in Hertz (Hz). 
-
-### MTNumberOfPulses
-
-RECOMMENDED. Number of magnetization transfer RF pulses apllied before the readout. 
-
-### MTPulseShape 
-
-RECOMMENDED. Shape of the magnetization transfer RF pulse waveform. Accepted values: `HARD`, `GAUSSIAN`, `GAUSSHANN` (gaussian pulse with Hanning window), `SINC`, `SINCHANN` (sinc pulse with Hanning window), `SINCGAUSS` (sinc pulse with Gaussian window), `FERMI`.  
-
-Notice that the presence/absence of a value in `Sequence Variant` DICOM tag does not provide enough information to group and name parametrically linked anatomical scans such as `MTR`, `MTS` and `MPM`.
-
-### MTPulseDuration 
-
-RECOMMENDED. Duration of the magnetization transfer RF pulse in seconds. 
-
-### SpoilingState 
-
-RECOMMENDED. Boolean value (`true` or `false`), specifying whether the pulse sequence uses any type of spoiling stratey to suppress transverse magnetization remaining after the readout. 
-
-### SpoilingType 
-
-RECOMMENDED. Specifies which spoiling method(s) are used by a spoiled sequence. Accepted values: `RF`, `GRADIENT` or `COMBINED`.
-
-### SpoilingRFPhaseIncrement 
-
-RECOMMENDED. The amount of incrementation described in degrees, which is applied to the phase of the excitation pulse at each TR period for achieving RF spoiling.
-
-### SpoilingGradientMoment 
-
- RECOMMENDED. Zeroth moment of the spoiler gradient lobe in militesla times second per meter (mT.s/m).
-
- ### SpoilingGradientDuration 
-
- RECOMMENDED. The duration of the spoiler gradient lobe in seconds. The duration of a trapezoidal lobe is defined as the summation of ramp-up and plateu times.  
+| Field Name               | Definition                                                                                                                                                                                |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SpoilingState            | RECOMMENDED. Boolean value (`true` or `false`), specifying whether the pulse sequence uses any type of spoiling stratey to suppress transverse magnetization remaining after the readout. |
+| SpoilingType             | RECOMMENDED. Specifies which spoiling method(s) are used by a spoiled sequence. Accepted values: `RF`, `GRADIENT` or `COMBINED`.                                                          |
+| SpoilingRFPhaseIncrement | RECOMMENDED. The amount of incrementation described in degrees, which is applied to the phase of the excitation pulse at each TR period for achieving RF spoiling.                        |
+| SpoilingGradientMoment   | RECOMMENDED. Zeroth moment of the spoiler gradient lobe in militesla times second per meter (mT.s/m).                                                                                     |
+| SpoilingGradientDuration | RECOMMENDED. The duration of the spoiler gradient lobe in seconds. The duration of a trapezoidal lobe is defined as the summation of ramp-up and plateu times.                            |
