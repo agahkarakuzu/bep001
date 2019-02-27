@@ -58,3 +58,10 @@ For example, `Sequence Variant` DICOM tag equals to `MTC\SP` for a product FLASH
 | SpoilingRFPhaseIncrement | RECOMMENDED. The amount of incrementation described in degrees, which is applied to the phase of the excitation pulse at each TR period for achieving RF spoiling.                        |
 | SpoilingGradientMoment   | RECOMMENDED. Zeroth moment of the spoiler gradient lobe in militesla times second per meter (mT.s/m).                                                                                     |
 | SpoilingGradientDuration | RECOMMENDED. The duration of the spoiler gradient lobe in seconds. The duration of a trapezoidal lobe is defined as the summation of ramp-up and plateu times.                            |
+
+## Overriding priority levels of the metadata-fields based on the qMRI methods 
+
+A metadata field which is described as RECOMMENDED by default may become REQUIRED depending on the qMRI dataset listing it. For example, `MTState`,`FlipAngle`, `EchoTime` and `RepetitionTimeExcitation` becomes REQUIRED for `MPM`. 
+
+Instead of inserting this information inside metadata field description, - as done for `MTState` in the present document for demonstration - we can create a separate table. [The spreadsheet](https://docs.google.com/spreadsheets/d/1awzGVflxXiWtzeLVOH5XI8Bar2ND9759yZxsK3stCzc/edit#gid=0) can be useful. 
+
